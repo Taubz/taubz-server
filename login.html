@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TAUBZ — Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="topbar small">
+    <div class="logo">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="22" height="22" rx="4" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 17L9 7L13 17L17 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand">TAUBZ <small>SERVER</small></span>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <section class="login-card" role="region" aria-labelledby="login-title">
+      <h2 id="login-title" class="title small" data-text="LOGIN">LOGIN</h2>
+
+      <form id="login-form" autocomplete="off" novalidate>
+        <div class="field">
+          <label for="username">Användarnamn</label>
+          <input id="username" name="username" type="text" inputmode="text" autocomplete="off" required />
+        </div>
+
+        <div class="field">
+          <label for="password">Lösenord</label>
+          <input id="password" name="password" type="password" autocomplete="off" required />
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox">
+            <input type="checkbox" id="remember" />
+            <span>Kom ihåg mig</span>
+          </label>
+          <a class="link" href="#" onclick="alert('Återställningsfunktion ej aktiverad'); return false;">Glömt lösen?</a>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">Logga in</button>
+          <button class="btn ghost" type="button" id="demo-btn">Demo</button>
+        </div>
+
+        <p class="muted note">Inga autentiseringsservrar är kopplade ännu — detta är frontend-demo.</p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

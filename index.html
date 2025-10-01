@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TAUBZ SERVER</title>
+
+  <!-- Typsnitt -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- canvas för bakgrundsanimation -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <div class="logo">
+      <!-- Enkel SVG-logotyp -->
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="22" height="22" rx="4" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M5 17L9 7L13 17L17 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand">TAUBZ <small>SERVER</small></span>
+    </div>
+    <nav class="nav">
+      <a href="login.html" class="btn small">Logga in</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <h1 class="title" data-text="TAUBZ">TAUBZ</h1>
+      <p class="subtitle">Kryptering - Lagring - Backup</p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="login.html">Starta inloggning</a>
+        <a class="btn ghost" href="#" onclick="alert('Registrering låst för tillfället'); return false;">Registrera</a>
+      </div>
+
+      <ul class="info">
+        <li><strong>Mode</strong> kryptlab</li>
+        <li><strong>Style</strong> Pixel-neon / CRT + modern UI</li>
+      </ul>
+    </div>
+
+    <aside class="terminal">
+      <div class="term-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <div class="term-title">Console</div>
+      </div>
+      <div class="term-body" id="console">
+        <div class="line">Booting TAUBZ OS v0.9.2...</div>
+        <div class="line">Initializing secure kernel...</div>
+        <div class="line">Network interfaces: <span class="muted">eth0, lo</span></div>
+        <div class="line">Ready. Press <kbd>Login</kbd> to continue.</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
